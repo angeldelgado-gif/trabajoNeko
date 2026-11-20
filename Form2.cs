@@ -101,17 +101,62 @@ namespace panaderia_neko_pan
                 return false;
             }
 
-            // Cantidad
-
-            // Precio Unitario
-
-            // Costo Despacho
+            // Valida los inputs de: Cantidad, PrecioUnitario y CostoDespacho
+            if (!EsNumValido()) return false;
 
             // Completitud Formulario
             if (!EstaCompletado()) 
             {
                 MessageBox.Show("Error: Complete todos los campos del Formulario!");
                 return false;
+            }
+
+
+            return true;
+        }
+
+        // Crea una lista de objetos tipo textBox para aplicarles las mismas condiciones
+        // y asi acceder a sus atributos y metodos
+        private bool EsNumValido() 
+        {
+            TextBox[] componentesNum = new TextBox[]
+            {
+                txtCantidad, txtPreciounitario,
+                txtCostodespacho
+            };
+
+            for (int i = 0; i < componentesNum.Length; i++) 
+            {
+                // Validacion input tipo Int
+                /*
+                 * Para el output se utiliza Substring de Name, ya que name devuelve el nombre completo
+                 * del objeto. Por ende SubString recorta el prefix(txt) del tipo de objeto, mostrando
+                 * limpiamente el nombre en pantalla del objeto con el error
+                 */
+                if (!int.TryParse(componentesNum[i].Text, out int compNumerico))
+                {
+                    componentesNum[i].Focus();
+                    componentesNum[i].Clear();
+                    MessageBox.Show($"Error: {componentesNum[i].Name.Substring(3)} debe tener un valor Valido!");
+
+                    return false;
+                }
+
+                // Validacion numero positivo mayor a 0
+                if (compNumerico <= 0) 
+                {
+                    if (compNumerico == 0) 
+                    {
+                        MessageBox.Show($"Error: {componentesNum[i].Name.Substring(3)} no puede ser 0!");
+                    }
+
+                    if (compNumerico < 0)
+                    {
+                        MessageBox.Show($"Error: {componentesNum[i].Name.Substring(3)} debe ser Positivo!");
+                    }
+
+                    return false;
+                }
             }
 
 
