@@ -104,6 +104,7 @@
             Controls.Add(btnRegistro);
             Controls.Add(lblnombre);
             Name = "MenuPrincipal";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Panaderia Neko Pan";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

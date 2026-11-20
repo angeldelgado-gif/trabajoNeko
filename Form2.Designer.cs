@@ -148,7 +148,7 @@
             lblTipoproducto.AutoSize = true;
             lblTipoproducto.Location = new Point(335, 179);
             lblTipoproducto.Name = "lblTipoproducto";
-            lblTipoproducto.Size = new Size(99, 15);
+            lblTipoproducto.Size = new Size(98, 15);
             lblTipoproducto.TabIndex = 13;
             lblTipoproducto.Text = "Tipo de producto";
             // 
@@ -196,7 +196,7 @@
             lblTipoentrega.AutoSize = true;
             lblTipoentrega.Location = new Point(51, 317);
             lblTipoentrega.Name = "lblTipoentrega";
-            lblTipoentrega.Size = new Size(90, 15);
+            lblTipoentrega.Size = new Size(89, 15);
             lblTipoentrega.TabIndex = 19;
             lblTipoentrega.Text = "Tipo de entrega";
             // 
@@ -253,6 +253,7 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(216, 23);
             dateTimePicker1.TabIndex = 26;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // btnGuardar
             // 
@@ -262,6 +263,7 @@
             btnGuardar.TabIndex = 27;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnAtras
             // 
@@ -326,7 +328,9 @@
             Controls.Add(txtNumeropedido);
             Controls.Add(lblNumeropedido);
             Name = "Registropedidos";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Registro de pedidos";
+            Load += Registropedidos_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
