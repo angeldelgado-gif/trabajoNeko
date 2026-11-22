@@ -254,23 +254,32 @@ namespace panaderia_neko_pan
             return true;
         }
 
-        /* 
+        
         public Pedido CrearPedido() 
         {
+            // Mas codigo, pero queda más legible que dejar todo esto en el constructor jeje
             int numPedido = int.Parse(txtNumeropedido.Text);
             int runCliente = int.Parse(txtRun.Text);
             int cantidadProducto = int.Parse(txtCantidad.Text);
             int precioUnitario = int.Parse(txtPreciounitario.Text);
             int costoDespacho = int.Parse(txtCostodespacho.Text);
 
-            // Añadir la direccion en una sola linea
-            // string observacion = txtObservac
+            string fecha = dateTimePicker1.Text;
+            string estado = cbxEstado.Text;
+            string nombreCliente = txtNombrecliente.Text;
+            string tipoProdcuto = cbxTipoproducto.Text;
+            string tipoEntega = cbxTipoEntrega.Text;
 
-            // Pedido nuevoPedido = new Pedido()
+            string observacion = txtObservaciones.Text.Replace("\r", " ").Replace("\n", " ");
+
+            Pedido nuevoPedido = new Pedido(
+                numPedido, fecha, estado, nombreCliente, runCliente, tipoProdcuto,
+                cantidadProducto, precioUnitario, tipoEntega, costoDespacho, observacion
+                );
 
             return nuevoPedido;
         }
-        */
+  
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {

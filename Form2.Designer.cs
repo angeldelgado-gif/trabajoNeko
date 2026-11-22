@@ -45,7 +45,7 @@
             lblTipoentrega = new Label();
             txtCostodespacho = new TextBox();
             lblCostodespacho = new Label();
-            textBox1 = new TextBox();
+            txtObservaciones = new TextBox();
             label1 = new Label();
             pictureBox1 = new PictureBox();
             dateTimePicker1 = new DateTimePicker();
@@ -191,13 +191,13 @@
             lblCostodespacho.TabIndex = 21;
             lblCostodespacho.Text = "Costo de despacho";
             // 
-            // textBox1
+            // txtObservaciones
             // 
-            textBox1.Location = new Point(51, 418);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(500, 49);
-            textBox1.TabIndex = 24;
+            txtObservaciones.Location = new Point(51, 418);
+            txtObservaciones.Multiline = true;
+            txtObservaciones.Name = "txtObservaciones";
+            txtObservaciones.Size = new Size(500, 49);
+            txtObservaciones.TabIndex = 24;
             // 
             // label1
             // 
@@ -292,7 +292,7 @@
             Controls.Add(btnGuardar);
             Controls.Add(dateTimePicker1);
             Controls.Add(pictureBox1);
-            Controls.Add(textBox1);
+            Controls.Add(txtObservaciones);
             Controls.Add(label1);
             Controls.Add(txtCostodespacho);
             Controls.Add(lblCostodespacho);
@@ -337,7 +337,7 @@
         private Label lblTipoentrega;
         private TextBox txtCostodespacho;
         private Label lblCostodespacho;
-        private TextBox textBox1;
+        private TextBox txtObservaciones;
         private Label label1;
         private PictureBox pictureBox1;
         private DateTimePicker dateTimePicker1;
