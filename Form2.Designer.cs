@@ -56,6 +56,7 @@
             btnAtras = new Button();
             cbxTipoproducto = new ComboBox();
             cbxEstado = new ComboBox();
+            cbxTipoEntrega = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -295,11 +296,22 @@
             cbxEstado.Size = new Size(216, 23);
             cbxEstado.TabIndex = 30;
             // 
+            // cbxTipoEntrega
+            // 
+            cbxTipoEntrega.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbxTipoEntrega.FormattingEnabled = true;
+            cbxTipoEntrega.Items.AddRange(new object[] { "Retiro en Tienda", "Despacho a Domicilio" });
+            cbxTipoEntrega.Location = new Point(52, 344);
+            cbxTipoEntrega.Name = "cbxTipoEntrega";
+            cbxTipoEntrega.Size = new Size(254, 23);
+            cbxTipoEntrega.TabIndex = 31;
+            // 
             // Registropedidos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(764, 561);
+            Controls.Add(cbxTipoEntrega);
             Controls.Add(cbxEstado);
             Controls.Add(cbxTipoproducto);
             Controls.Add(btnAtras);
@@ -365,5 +377,6 @@
         private Button btnAtras;
         private ComboBox cbxTipoproducto;
         private ComboBox cbxEstado;
+        private ComboBox cbxTipoEntrega;
     }
 }
