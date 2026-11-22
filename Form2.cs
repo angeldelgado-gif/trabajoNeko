@@ -68,7 +68,7 @@ namespace panaderia_neko_pan
             MessageBox.Show("Pedido Guardado Exitosamente!!!");
 
             // Borrado de todos los campos
-
+            LimpiarDatos();
         }
 
         // Clase utilitaria para validar los inputs
@@ -310,6 +310,34 @@ namespace panaderia_neko_pan
                 $"{pedido.CostoSubTotal},{pedido.CostoIva},{pedido.CostoTotal}";
 
             File.AppendAllText(archivo, registroPedido + Environment.NewLine);
+        }
+
+        // metodo utilitario para limpiar los inputs
+        private void LimpiarDatos()
+        {
+            TextBox[] componentesTxt = new TextBox[]
+            {
+                txtNumeropedido,txtNombrecliente, 
+                txtRun,txtCantidad, 
+                txtPreciounitario, txtCostodespacho,
+                txtObservaciones
+            };
+
+            for (int i = 0; i < componentesTxt.Length; i++)
+            {
+                componentesTxt[i].Clear();
+            }
+
+            ComboBox[] componentesCbx = new ComboBox[]
+            {
+                cbxEstado, cbxTipoproducto, cbxTipoproducto
+            };
+
+            for (int i = 0; i < componentesCbx.Length; i++)
+            {
+                componentesCbx[i].ResetText();
+            }
+
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
