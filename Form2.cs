@@ -60,9 +60,8 @@ namespace panaderia_neko_pan
             // Creamos el objeto pedido
             Pedido pedido = CrearPedido();
 
-            // Crear documento
-
             // Guardar documento
+            GuardarPedido(pedido);
 
             // Mensaje de guardado exitoso
             
@@ -283,7 +282,27 @@ namespace panaderia_neko_pan
 
             return nuevoPedido;
         }
-  
+
+        private void GuardarPedido(Pedido pedido) 
+        {
+            // TODO: Cambiar el nombre del archivo a RegistroPedidos.csv
+            string ruta = Application.StartupPath;
+            string archivo = Path.Combine(ruta, "Test.txt");
+
+            if (!File.Exists(archivo)) 
+            {
+                string encabezadoRegistro = "NumPedido,Fecha,Estado,NombreCliente,RunCliente," +
+                "TipoProducto,Cantidad,PrecioUnitario,TipoEntrega,CostoDespacho," +
+                "Observaciones,CostoIems,SutTotal,Iva,CostoTotal";
+
+                File.WriteAllText(archivo, encabezadoRegistro + Environment.NewLine, Encoding.UTF8);
+
+                // Debug
+                MessageBox.Show("Archivo creado en " + ruta);
+            }
+
+
+        }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
