@@ -221,6 +221,7 @@
             // 
             // dateTimePicker1
             // 
+            dateTimePicker1.Format = DateTimePickerFormat.Short;
             dateTimePicker1.ImeMode = ImeMode.Off;
             dateTimePicker1.Location = new Point(250, 60);
             dateTimePicker1.MaxDate = new DateTime(2026, 12, 31, 0, 0, 0, 0);

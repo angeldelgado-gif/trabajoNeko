@@ -1,9 +1,10 @@
-﻿using System;
-using System.IO;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
@@ -273,7 +274,8 @@ namespace panaderia_neko_pan
             string tipoProdcuto = cbxTipoproducto.Text;
             string tipoEntega = cbxTipoEntrega.Text;
 
-            string observacion = txtObservaciones.Text.Replace("\r", " ").Replace("\n", " ");
+            string observacion = txtObservaciones.Text.Replace("\r", " ").Replace("\n", " ")
+                .Replace(",", "").Trim();
 
             Pedido nuevoPedido = new Pedido(
                 numPedido, fecha, estado, nombreCliente, runCliente, tipoProdcuto,
@@ -287,7 +289,7 @@ namespace panaderia_neko_pan
         {
             // TODO: Cambiar el nombre del archivo a RegistroPedidos.csv
             string ruta = Application.StartupPath;
-            string archivo = Path.Combine(ruta, "Test.txt");
+            string archivo = Path.Combine(ruta, "RegistroPedidos.csv");
 
             if (!File.Exists(archivo)) 
             {
@@ -297,11 +299,15 @@ namespace panaderia_neko_pan
 
                 File.WriteAllText(archivo, encabezadoRegistro + Environment.NewLine, Encoding.UTF8);
 
-                // Debug
-                MessageBox.Show("Archivo creado en " + ruta);
             }
 
+            string registroPedido = $"{pedido.NumPedido},{pedido.Fecha},{pedido.Estado}," +
+                $"{pedido.NombreCliente},{pedido.RunCliente},{pedido.TipoProducto}," +
+                $"{pedido.CantidadProducto},{pedido.PrecioUnitario},{pedido.TipoEntrega}," +
+                $"{pedido.CostoDespacho},{pedido.Observacion},{pedido.CostoItems}," +
+                $"{pedido.CostoSubTotal},{pedido.CostoIva},{pedido.CostoTotal}";
 
+            File.AppendAllText(archivo, registroPedido + Environment.NewLine);
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
