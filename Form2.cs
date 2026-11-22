@@ -65,8 +65,10 @@ namespace panaderia_neko_pan
             GuardarPedido(pedido);
 
             // Mensaje de guardado exitoso
-            
+            MessageBox.Show("Pedido Guardado Exitosamente!!!");
+
             // Borrado de todos los campos
+
         }
 
         // Clase utilitaria para validar los inputs
