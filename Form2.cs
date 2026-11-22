@@ -21,6 +21,7 @@ namespace panaderia_neko_pan
         public int PrecioUnitario { get; set; }
         public string TipoEntrega { get; set; }
         public int CostoDespacho { get; set; }
+        public string Observacion { get; set; }
 
         // Costo Items = cantidad items * Precio unitario
         // costo subTotal =  costo Items + costoDespacho
@@ -32,8 +33,8 @@ namespace panaderia_neko_pan
         public int CostoIva { get; set; }
         public int CostoTotal { get; set; }
 
-        public Pedido(int numPedido, string fecha, string estado,string nombreCliente, int runCliente,
-            string tipoProducto, int cantidadProducto, int precioUnitario, string tipoEntrega, int costoDespacho)
+        public Pedido(int numPedido, string fecha, string estado,string nombreCliente, int runCliente, string tipoProducto,
+            int cantidadProducto, int precioUnitario, string tipoEntrega, int costoDespacho, string observacion)
         { 
             NumPedido = numPedido;
             Fecha = fecha;
@@ -45,6 +46,7 @@ namespace panaderia_neko_pan
             PrecioUnitario = precioUnitario;
             TipoEntrega = tipoEntrega;
             CostoDespacho = costoDespacho;
+            Observacion = observacion;
 
             CostoItems = CalcularCostoItems(cantidadProducto, precioUnitario);
             CostoSubTotal = CalcularSubTotal(CostoItems, costoDespacho);
@@ -234,6 +236,7 @@ namespace panaderia_neko_pan
         // Bool utilitario para ver si estan todos los campos completados
         private bool EstaCompletado() 
         {
+            // TODO: Mover esto afuera para mejor accesibilidad
             string[] componentes = new String[] 
             {
                 txtNumeropedido.Text, cbxEstado.Text,
