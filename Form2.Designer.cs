@@ -44,7 +44,6 @@
             lblCantidad = new Label();
             txtPreciounitario = new TextBox();
             lblPreciounitario = new Label();
-            txtTipoentrega = new TextBox();
             lblTipoentrega = new Label();
             txtCostodespacho = new TextBox();
             lblCostodespacho = new Label();
@@ -185,13 +184,6 @@
             lblPreciounitario.TabIndex = 17;
             lblPreciounitario.Text = "Precio Unitario";
             // 
-            // txtTipoentrega
-            // 
-            txtTipoentrega.Location = new Point(51, 344);
-            txtTipoentrega.Name = "txtTipoentrega";
-            txtTipoentrega.Size = new Size(255, 23);
-            txtTipoentrega.TabIndex = 20;
-            // 
             // lblTipoentrega
             // 
             lblTipoentrega.AutoSize = true;
@@ -322,7 +314,6 @@
             Controls.Add(label1);
             Controls.Add(txtCostodespacho);
             Controls.Add(lblCostodespacho);
-            Controls.Add(txtTipoentrega);
             Controls.Add(lblTipoentrega);
             Controls.Add(txtPreciounitario);
             Controls.Add(lblPreciounitario);
@@ -365,7 +356,6 @@
         private Label lblCantidad;
         private TextBox txtPreciounitario;
         private Label lblPreciounitario;
-        private TextBox txtTipoentrega;
         private Label lblTipoentrega;
         private TextBox txtCostodespacho;
         private Label lblCostodespacho;
