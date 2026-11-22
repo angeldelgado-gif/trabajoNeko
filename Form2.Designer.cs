@@ -128,7 +128,7 @@
             // lblTipoproducto
             // 
             lblTipoproducto.AutoSize = true;
-            lblTipoproducto.Location = new Point(335, 179);
+            lblTipoproducto.Location = new Point(51, 180);
             lblTipoproducto.Name = "lblTipoproducto";
             lblTipoproducto.Size = new Size(98, 15);
             lblTipoproducto.TabIndex = 13;
@@ -255,9 +255,9 @@
             cbxTipoproducto.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxTipoproducto.FormattingEnabled = true;
             cbxTipoproducto.Items.AddRange(new object[] { "Pan hallulla", "Pan marraqueta", "Pan dobladitas", "Pan Molde", "Berlin", "Pastel de hoja", "Torta amor", "Torta kawai" });
-            cbxTipoproducto.Location = new Point(335, 206);
+            cbxTipoproducto.Location = new Point(51, 207);
             cbxTipoproducto.Name = "cbxTipoproducto";
-            cbxTipoproducto.Size = new Size(216, 23);
+            cbxTipoproducto.Size = new Size(255, 23);
             cbxTipoproducto.TabIndex = 29;
             // 
             // cbxEstado
