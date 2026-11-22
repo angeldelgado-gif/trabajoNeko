@@ -9,73 +9,6 @@ using System.Windows.Forms;
 
 namespace panaderia_neko_pan
 {
-    public class Pedido 
-    {
-        public int NumPedido { get; set; }
-        public string Fecha { get; set; }
-        public string Estado { get; set; }
-        public string NombreCliente { get; set; }
-        public int RunCliente { get; set; }
-        public string TipoProducto { get; set; }
-        public int CantidadProducto { get; set; }
-        public int PrecioUnitario { get; set; }
-        public string TipoEntrega { get; set; }
-        public int CostoDespacho { get; set; }
-        public string Observacion { get; set; }
-
-        // Costo Items = cantidad items * Precio unitario
-        // costo subTotal =  costo Items + costoDespacho
-        // costo Iva
-        // costo Total = iva + subTotal
-
-        public int CostoItems { get; set; }
-        public int CostoSubTotal { get; set; }
-        public int CostoIva { get; set; }
-        public int CostoTotal { get; set; }
-
-        public Pedido(int numPedido, string fecha, string estado,string nombreCliente, int runCliente, string tipoProducto,
-            int cantidadProducto, int precioUnitario, string tipoEntrega, int costoDespacho, string observacion)
-        { 
-            NumPedido = numPedido;
-            Fecha = fecha;
-            Estado = estado;
-            NombreCliente = nombreCliente;
-            RunCliente = runCliente;
-            TipoProducto = tipoProducto;
-            CantidadProducto = cantidadProducto;
-            PrecioUnitario = precioUnitario;
-            TipoEntrega = tipoEntrega;
-            CostoDespacho = costoDespacho;
-            Observacion = observacion;
-
-            CostoItems = CalcularCostoItems(cantidadProducto, precioUnitario);
-            CostoSubTotal = CalcularSubTotal(CostoItems, costoDespacho);
-            CostoIva = CalcularIva(CostoSubTotal);
-            CostoTotal = CalcularTotal(CostoSubTotal, CostoIva);
-        }
-
-        private int CalcularCostoItems(int cantidadProducto, int precioUnitario) 
-        { 
-              return cantidadProducto * precioUnitario;
-        }
-
-        private int CalcularSubTotal(int costoItems, int costoDespacho) 
-        { 
-            return costoItems + costoDespacho;
-        }
-
-        private int CalcularIva(int subTotal) 
-        { 
-            return (int)Math.Round(subTotal * 0.19);
-        }
-
-        private int CalcularTotal(int costoSubTotal, int iva) 
-        { 
-            return costoSubTotal + iva;
-        }
-
-    }
-
     public partial class Registropedidos : Form
     {
         public Registropedidos()
@@ -185,6 +118,73 @@ namespace panaderia_neko_pan
             return true;
         }
 
+        public class Pedido
+        {
+            public int NumPedido { get; set; }
+            public string Fecha { get; set; }
+            public string Estado { get; set; }
+            public string NombreCliente { get; set; }
+            public int RunCliente { get; set; }
+            public string TipoProducto { get; set; }
+            public int CantidadProducto { get; set; }
+            public int PrecioUnitario { get; set; }
+            public string TipoEntrega { get; set; }
+            public int CostoDespacho { get; set; }
+            public string Observacion { get; set; }
+
+            // Costo Items = cantidad items * Precio unitario
+            // costo subTotal =  costo Items + costoDespacho
+            // costo Iva
+            // costo Total = iva + subTotal
+
+            public int CostoItems { get; set; }
+            public int CostoSubTotal { get; set; }
+            public int CostoIva { get; set; }
+            public int CostoTotal { get; set; }
+
+            public Pedido(int numPedido, string fecha, string estado, string nombreCliente, int runCliente, string tipoProducto,
+                int cantidadProducto, int precioUnitario, string tipoEntrega, int costoDespacho, string observacion)
+            {
+                NumPedido = numPedido;
+                Fecha = fecha;
+                Estado = estado;
+                NombreCliente = nombreCliente;
+                RunCliente = runCliente;
+                TipoProducto = tipoProducto;
+                CantidadProducto = cantidadProducto;
+                PrecioUnitario = precioUnitario;
+                TipoEntrega = tipoEntrega;
+                CostoDespacho = costoDespacho;
+                Observacion = observacion;
+
+                CostoItems = CalcularCostoItems(cantidadProducto, precioUnitario);
+                CostoSubTotal = CalcularSubTotal(CostoItems, costoDespacho);
+                CostoIva = CalcularIva(CostoSubTotal);
+                CostoTotal = CalcularTotal(CostoSubTotal, CostoIva);
+            }
+
+            private int CalcularCostoItems(int cantidadProducto, int precioUnitario)
+            {
+                return cantidadProducto * precioUnitario;
+            }
+
+            private int CalcularSubTotal(int costoItems, int costoDespacho)
+            {
+                return costoItems + costoDespacho;
+            }
+
+            private int CalcularIva(int subTotal)
+            {
+                return (int)Math.Round(subTotal * 0.19);
+            }
+
+            private int CalcularTotal(int costoSubTotal, int iva)
+            {
+                return costoSubTotal + iva;
+            }
+
+        }
+
         // Crea una lista de objetos tipo textBox para aplicarles las mismas condiciones
         // y asi acceder a sus atributos y metodos
         private bool EsNumValido() 
@@ -253,6 +253,24 @@ namespace panaderia_neko_pan
 
             return true;
         }
+
+        /* 
+        public Pedido CrearPedido() 
+        {
+            int numPedido = int.Parse(txtNumeropedido.Text);
+            int runCliente = int.Parse(txtRun.Text);
+            int cantidadProducto = int.Parse(txtCantidad.Text);
+            int precioUnitario = int.Parse(txtPreciounitario.Text);
+            int costoDespacho = int.Parse(txtCostodespacho.Text);
+
+            // Añadir la direccion en una sola linea
+            // string observacion = txtObservac
+
+            // Pedido nuevoPedido = new Pedido()
+
+            return nuevoPedido;
+        }
+        */
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
