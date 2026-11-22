@@ -9,6 +9,71 @@ using System.Windows.Forms;
 
 namespace panaderia_neko_pan
 {
+    public class Pedido 
+    {
+        public int NumPedido { get; set; }
+        public string Fecha { get; set; }
+        public string Estado { get; set; }
+        public string NombreCliente { get; set; }
+        public int RunCliente { get; set; }
+        public string TipoProducto { get; set; }
+        public int CantidadProducto { get; set; }
+        public int PrecioUnitario { get; set; }
+        public string TipoEntrega { get; set; }
+        public int CostoDespacho { get; set; }
+
+        // Costo Items = cantidad items * Precio unitario
+        // costo subTotal =  costo Items + costoDespacho
+        // costo Iva
+        // costo Total = iva + subTotal
+
+        public int CostoItems { get; set; }
+        public int CostoSubTotal { get; set; }
+        public int CostoIva { get; set; }
+        public int CostoTotal { get; set; }
+
+        public Pedido(int numPedido, string fecha, string estado,string nombreCliente, int runCliente,
+            string tipoProducto, int cantidadProducto, int precioUnitario, string tipoEntrega, int costoDespacho)
+        { 
+            NumPedido = numPedido;
+            Fecha = fecha;
+            Estado = estado;
+            NombreCliente = nombreCliente;
+            RunCliente = runCliente;
+            TipoProducto = tipoProducto;
+            CantidadProducto = cantidadProducto;
+            PrecioUnitario = precioUnitario;
+            TipoEntrega = tipoEntrega;
+            CostoDespacho = costoDespacho;
+
+            CostoItems = CalcularCostoItems(cantidadProducto, precioUnitario);
+            CostoSubTotal = CalcularSubTotal(CostoItems, costoDespacho);
+            CostoIva = CalcularIva(CostoSubTotal);
+            CostoTotal = CalcularTotal(CostoSubTotal, CostoIva);
+        }
+
+        private int CalcularCostoItems(int cantidadProducto, int precioUnitario) 
+        { 
+              return cantidadProducto * precioUnitario;
+        }
+
+        private int CalcularSubTotal(int costoItems, int costoDespacho) 
+        { 
+            return costoItems + costoDespacho;
+        }
+
+        private int CalcularIva(int subTotal) 
+        { 
+            return (int)Math.Round(subTotal * 0.19);
+        }
+
+        private int CalcularTotal(int costoSubTotal, int iva) 
+        { 
+            return costoSubTotal + iva;
+        }
+
+    }
+
     public partial class Registropedidos : Form
     {
         public Registropedidos()
@@ -60,6 +125,9 @@ namespace panaderia_neko_pan
             // Debug
             MessageBox.Show("Exitooo!");
 
+            // Mensaje de guaradado exitoso
+
+            // Borrado de todos los campos
         }
 
         // Clase utilitaria para validar los inputs
