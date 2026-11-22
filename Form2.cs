@@ -57,11 +57,15 @@ namespace panaderia_neko_pan
                 return;
             }
 
-            // Debug
-            MessageBox.Show("Exitooo!");
+            // Creamos el objeto pedido
+            Pedido pedido = CrearPedido();
 
-            // Mensaje de guaradado exitoso
+            // Crear documento
 
+            // Guardar documento
+
+            // Mensaje de guardado exitoso
+            
             // Borrado de todos los campos
         }
 
