@@ -170,7 +170,7 @@ namespace panaderia_neko_pan
             {
                 txtNumeropedido.Text, cbxEstado.Text,
                 txtNombrecliente.Text, txtRun.Text, 
-                txtProducto.Text, txtCantidad.Text, 
+                txtCantidad.Text, 
                 txtPreciounitario.Text, 
                 txtCostodespacho.Text, cbxTipoproducto.Text
             };

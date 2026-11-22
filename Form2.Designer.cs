@@ -37,7 +37,6 @@
             lblNombrecliente = new Label();
             txtRun = new TextBox();
             lblRun = new Label();
-            txtProducto = new TextBox();
             lblProducto = new Label();
             lblTipoproducto = new Label();
             txtCantidad = new TextBox();
@@ -126,13 +125,6 @@
             lblRun.Size = new Size(28, 15);
             lblRun.TabIndex = 9;
             lblRun.Text = "Run";
-            // 
-            // txtProducto
-            // 
-            txtProducto.Location = new Point(51, 206);
-            txtProducto.Name = "txtProducto";
-            txtProducto.Size = new Size(255, 23);
-            txtProducto.TabIndex = 12;
             // 
             // lblProducto
             // 
@@ -320,7 +312,6 @@
             Controls.Add(txtCantidad);
             Controls.Add(lblCantidad);
             Controls.Add(lblTipoproducto);
-            Controls.Add(txtProducto);
             Controls.Add(lblProducto);
             Controls.Add(txtRun);
             Controls.Add(lblRun);
@@ -349,7 +340,6 @@
         private Label lblNombrecliente;
         private TextBox txtRun;
         private Label lblRun;
-        private TextBox txtProducto;
         private Label lblProducto;
         private Label lblTipoproducto;
         private TextBox txtCantidad;
