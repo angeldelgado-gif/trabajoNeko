@@ -335,7 +335,7 @@ namespace panaderia_neko_pan
 
             for (int i = 0; i < componentesCbx.Length; i++)
             {
-                componentesCbx[i].ResetText();
+                componentesCbx[i].SelectedIndex = -1;
             }
 
         }
