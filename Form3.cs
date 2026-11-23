@@ -48,6 +48,7 @@ namespace panaderia_neko_pan
             string[] registros = File.ReadAllLines(archivo);
             StringBuilder resultado = new StringBuilder();
 
+            // Lista para guardar los Pedidos
             List<Registropedidos.Pedido> pedidos = new List<Registropedidos.Pedido>();
 
             for (int i = 1; i < registros.Length; i++)
@@ -58,7 +59,7 @@ namespace panaderia_neko_pan
                 string[] datos = registro.Split(',');
                 if (datos.Length == 15)
                 {
-
+                    // Se crea un objeto tipo pedido con los datos registrados del CSV
                     Registropedidos.Pedido consultaPedido =
                         new Registropedidos.Pedido(
                             int.Parse(datos[0]),
@@ -74,10 +75,12 @@ namespace panaderia_neko_pan
                             datos[10]
                         );
 
+                    // Se agrega el objeto pedido a la lista dinamica
                     pedidos.Add(consultaPedido);
                 }
             } 
 
+            // Se pasa la lista con todos los Pedidos, al dataGridView para mostrarlo como tabla
             dataGridView1.DataSource = pedidos;
   
         }
