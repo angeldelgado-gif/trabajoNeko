@@ -34,11 +34,11 @@
             txtNumeropedido = new TextBox();
             btnBuscar = new Button();
             btnVertodo = new Button();
-            dataGridView1 = new DataGridView();
+            dataPedidos = new DataGridView();
             lblResumen = new Label();
-            label1 = new Label();
+            lblTotal = new Label();
             btnAtras = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataPedidos).BeginInit();
             SuspendLayout();
             // 
             // lblBuscarcliente
@@ -94,14 +94,15 @@
             btnVertodo.Text = "Ver todo";
             btnVertodo.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dataPedidos
             // 
-            dataGridView1.AllowUserToAddRows = false;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(49, 123);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(628, 150);
-            dataGridView1.TabIndex = 36;
+            dataPedidos.AllowUserToAddRows = false;
+            dataPedidos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataPedidos.Location = new Point(49, 123);
+            dataPedidos.Name = "dataPedidos";
+            dataPedidos.Size = new Size(628, 150);
+            dataPedidos.TabIndex = 36;
+            dataPedidos.CellContentClick += dataGridView1_CellContentClick;
             // 
             // lblResumen
             // 
@@ -112,14 +113,14 @@
             lblResumen.TabIndex = 37;
             lblResumen.Text = "Pedidos encontrados: 0";
             // 
-            // label1
+            // lblTotal
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(236, 309);
-            label1.Name = "label1";
-            label1.Size = new Size(115, 15);
-            label1.TabIndex = 38;
-            label1.Text = "Total encontrado: $0";
+            lblTotal.AutoSize = true;
+            lblTotal.Location = new Point(236, 309);
+            lblTotal.Name = "lblTotal";
+            lblTotal.Size = new Size(115, 15);
+            lblTotal.TabIndex = 38;
+            lblTotal.Text = "Total encontrado: $0";
             // 
             // btnAtras
             // 
@@ -135,11 +136,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(841, 450);
+            ClientSize = new Size(718, 450);
             Controls.Add(btnAtras);
-            Controls.Add(label1);
+            Controls.Add(lblTotal);
             Controls.Add(lblResumen);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataPedidos);
             Controls.Add(btnVertodo);
             Controls.Add(btnBuscar);
             Controls.Add(txtNumeropedido);
@@ -147,8 +148,10 @@
             Controls.Add(cbxBuscarcliente);
             Controls.Add(lblBuscarcliente);
             Name = "Form3";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Consulta de informacion";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += Form3_Load;
+            ((System.ComponentModel.ISupportInitialize)dataPedidos).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -160,9 +163,9 @@
         private TextBox txtNumeropedido;
         private Button btnBuscar;
         private Button btnVertodo;
-        private DataGridView dataGridView1;
+        private DataGridView dataPedidos;
         private Label lblResumen;
-        private Label label1;
+        private Label lblTotal;
         private Button btnAtras;
     }
 }
