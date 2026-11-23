@@ -84,6 +84,7 @@
             btnBuscar.TabIndex = 34;
             btnBuscar.Text = "Buscar";
             btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
             // 
             // btnVertodo
             // 
@@ -93,6 +94,7 @@
             btnVertodo.TabIndex = 35;
             btnVertodo.Text = "Ver todo";
             btnVertodo.UseVisualStyleBackColor = true;
+            btnVertodo.Click += btnVertodo_Click;
             // 
             // dataGridView1
             // 
