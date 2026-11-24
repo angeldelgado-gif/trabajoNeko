@@ -25,12 +25,11 @@ namespace panaderia_neko_pan
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            BuscarPedido();
         }
 
         private void btnVertodo_Click(object sender, EventArgs e)
         {
-
+            BuscarPedido();
         }
 
         // Busca el pedido 
