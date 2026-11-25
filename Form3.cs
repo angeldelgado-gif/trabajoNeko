@@ -66,7 +66,7 @@ namespace panaderia_neko_pan
                             datos[10]
                         );
 
-                    if (int.Parse(datos[0]) == inputNumPedido)
+                    if (int.Parse(datos[0]) == inputNumPedido || cbxBuscarcliente.Text == datos[2])
                     {
                         pedidos.Add(consultaPedido);
                         encontrado = true;
