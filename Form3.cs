@@ -29,11 +29,11 @@ namespace panaderia_neko_pan
 
         private void btnVertodo_Click(object sender, EventArgs e)
         {
-            BuscarPedido();
+            MostrarPedidos();
         }
 
         // Busca el pedido 
-        private void BuscarPedido()
+        private void MostrarPedidos()
         {
             string ruta = Application.StartupPath;
             string archivo = Path.Combine(ruta, "RegistroPedidos.csv");
