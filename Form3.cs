@@ -25,7 +25,14 @@ namespace panaderia_neko_pan
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            int.TryParse(txtNumeropedido.Text, out int inputNumPedido);
+            if (!int.TryParse(txtNumeropedido.Text, out int inputNumPedido))
+            {
+                MessageBox.Show("Error: Ingrese un codigo Numerico Valido!");
+                txtNumeropedido.Focus();
+                txtNumeropedido.Clear();
+                return;
+            }
+
             bool encontrado = false;
 
             string ruta = Application.StartupPath;
@@ -71,7 +78,7 @@ namespace panaderia_neko_pan
                         pedidos.Add(consultaPedido);
                         encontrado = true;
                     }
-                   
+
                 }
             }
 
@@ -79,7 +86,7 @@ namespace panaderia_neko_pan
             {
                 dataGridView1.DataSource = pedidos;
             }
-            else 
+            else
             {
                 MessageBox.Show("Error: Pedido No Encontrado!");
             }
@@ -111,9 +118,9 @@ namespace panaderia_neko_pan
 
             for (int i = 1; i < registros.Length; i++)
             {
-                
+
                 string registro = registros[i];
-                
+
                 string[] datos = registro.Split(',');
                 if (datos.Length == 15)
                 {
@@ -136,12 +143,18 @@ namespace panaderia_neko_pan
                     // Se agrega el objeto pedido a la lista dinamica
                     pedidos.Add(consultaPedido);
                 }
-            } 
+            }
 
             // Se pasa la lista con todos los Pedidos, al dataGridView para mostrarlo como tabla
             dataGridView1.DataSource = pedidos;
-  
+
+            lblResumen.Text = $"Pedidos encontrados: {pedidos.Count}";
+
         }
 
+        private void lblResumen_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -113,6 +113,7 @@
             lblResumen.Size = new Size(130, 15);
             lblResumen.TabIndex = 37;
             lblResumen.Text = "Pedidos encontrados: 0";
+            lblResumen.Click += lblResumen_Click;
             // 
             // label1
             // 
