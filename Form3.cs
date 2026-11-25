@@ -25,6 +25,65 @@ namespace panaderia_neko_pan
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            int.TryParse(txtNumeropedido.Text, out int inputNumPedido);
+            bool encontrado = false;
+
+            string ruta = Application.StartupPath;
+            string archivo = Path.Combine(ruta, "RegistroPedidos.csv");
+
+            if (!File.Exists(archivo))
+            {
+                MessageBox.Show("Error: Aun no existe un registro");
+                return;
+            }
+
+            string[] registros = File.ReadAllLines(archivo);
+            StringBuilder resultado = new StringBuilder();
+
+            // Lista para guardar los Pedidos
+            List<Registropedidos.Pedido> pedidos = new List<Registropedidos.Pedido>();
+
+            for (int i = 1; i < registros.Length; i++)
+            {
+
+                string registro = registros[i];
+
+                string[] datos = registro.Split(',');
+                if (datos.Length == 15)
+                {
+                    Registropedidos.Pedido consultaPedido =
+                        new Registropedidos.Pedido(
+                            int.Parse(datos[0]),
+                            datos[1],
+                            datos[2],
+                            datos[3],
+                            int.Parse(datos[4]),
+                            datos[5],
+                            int.Parse(datos[6]),
+                            int.Parse(datos[7]),
+                            datos[8],
+                            int.Parse(datos[9]),
+                            datos[10]
+                        );
+
+                    if (int.Parse(datos[0]) == inputNumPedido)
+                    {
+                        pedidos.Add(consultaPedido);
+                        encontrado = true;
+                    }
+                   
+                }
+            }
+
+            if (encontrado)
+            {
+                dataGridView1.DataSource = pedidos;
+            }
+            else 
+            {
+                MessageBox.Show("Error: Pedido No Encontrado!");
+            }
+
         }
 
         private void btnVertodo_Click(object sender, EventArgs e)
