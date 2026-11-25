@@ -65,9 +65,9 @@
             lblTextobuscar.AutoSize = true;
             lblTextobuscar.Location = new Point(223, 29);
             lblTextobuscar.Name = "lblTextobuscar";
-            lblTextobuscar.Size = new Size(82, 15);
+            lblTextobuscar.Size = new Size(124, 15);
             lblTextobuscar.TabIndex = 32;
-            lblTextobuscar.Text = "Texto a buscar";
+            lblTextobuscar.Text = "Buscar Codigo Cliente";
             // 
             // txtNumeropedido
             // 
