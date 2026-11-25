@@ -85,7 +85,7 @@ namespace panaderia_neko_pan
             }
 
             // Nombre Cliente
-            if (txtNombrecliente.Text.Length <= 1 || txtNombrecliente.Text.Length >= 15) 
+            if (txtNombrecliente.Text.Length <= 1 || txtNombrecliente.Text.Length >= 15)
             {
                 MessageBox.Show("Error: Ingrese un nombre Valido!");
                 txtNombrecliente.Focus();
@@ -94,7 +94,7 @@ namespace panaderia_neko_pan
             }
 
             // Run
-            if (txtRun.Text.Contains(".") || txtRun.Text.Contains("-")) 
+            if (txtRun.Text.Contains(".") || txtRun.Text.Contains("-"))
             {
                 MessageBox.Show("Error: Ingrese Run sin Puntos ni Digito Verificador");
                 txtRun.Focus();
@@ -102,7 +102,7 @@ namespace panaderia_neko_pan
             }
 
             if (txtRun.Text.Length < 7 || txtRun.Text.Length > 8 ||
-                !int.TryParse(txtRun.Text, out int num)) 
+                !int.TryParse(txtRun.Text, out int num))
             {
                 MessageBox.Show("Error: Ingrese un Rut Valido");
                 txtRun.Focus();
@@ -114,7 +114,7 @@ namespace panaderia_neko_pan
             if (!EsNumValido()) return false;
 
             // Completitud Formulario
-            if (!EstaCompletado()) 
+            if (!EstaCompletado())
             {
                 MessageBox.Show("Error: Complete todos los campos del Formulario!");
                 return false;
@@ -193,7 +193,7 @@ namespace panaderia_neko_pan
 
         // Crea una lista de objetos tipo textBox para aplicarles las mismas condiciones
         // y asi acceder a sus atributos y metodos
-        private bool EsNumValido() 
+        private bool EsNumValido()
         {
             TextBox[] componentesNum = new TextBox[]
             {
@@ -201,7 +201,7 @@ namespace panaderia_neko_pan
                 txtCostodespacho
             };
 
-            for (int i = 0; i < componentesNum.Length; i++) 
+            for (int i = 0; i < componentesNum.Length; i++)
             {
                 // Validacion input tipo Int
                 /*
@@ -219,9 +219,9 @@ namespace panaderia_neko_pan
                 }
 
                 // Validacion numero positivo mayor a 0
-                if (compNumerico <= 0) 
+                if (compNumerico <= 0)
                 {
-                    if (compNumerico == 0) 
+                    if (compNumerico == 0)
                     {
                         MessageBox.Show($"Error: {componentesNum[i].Name.Substring(3)} no puede ser 0!");
                     }
@@ -240,19 +240,19 @@ namespace panaderia_neko_pan
         }
 
         // Bool utilitario para ver si estan todos los campos completados
-        private bool EstaCompletado() 
+        private bool EstaCompletado()
         {
             // TODO: Mover esto afuera para mejor accesibilidad
-            string[] componentes = new String[] 
+            string[] componentes = new String[]
             {
                 txtNumeropedido.Text, cbxEstado.Text,
-                txtNombrecliente.Text, txtRun.Text, 
-                cbxTipoEntrega.Text, txtCantidad.Text, 
-                txtPreciounitario.Text, txtCostodespacho.Text, 
+                txtNombrecliente.Text, txtRun.Text,
+                cbxTipoEntrega.Text, txtCantidad.Text,
+                txtPreciounitario.Text, txtCostodespacho.Text,
                 cbxTipoproducto.Text
             };
 
-            for (int i = 0; i < componentes.Length; i++) 
+            for (int i = 0; i < componentes.Length; i++)
             {
                 if (componentes[i].Trim() == "") return false;
             }
@@ -260,8 +260,8 @@ namespace panaderia_neko_pan
             return true;
         }
 
-        
-        public Pedido CrearPedido() 
+
+        public Pedido CrearPedido()
         {
             // Mas codigo, pero queda más legible que dejar todo esto en el constructor jeje
             int numPedido = int.Parse(txtNumeropedido.Text);
@@ -287,13 +287,13 @@ namespace panaderia_neko_pan
             return nuevoPedido;
         }
 
-        private void GuardarPedido(Pedido pedido) 
+        private void GuardarPedido(Pedido pedido)
         {
             // TODO: Cambiar el nombre del archivo a RegistroPedidos.csv
             string ruta = Application.StartupPath;
             string archivo = Path.Combine(ruta, "RegistroPedidos.csv");
 
-            if (!File.Exists(archivo)) 
+            if (!File.Exists(archivo))
             {
                 string encabezadoRegistro = "NumPedido,Fecha,Estado,NombreCliente,RunCliente," +
                 "TipoProducto,Cantidad,PrecioUnitario,TipoEntrega,CostoDespacho," +
@@ -317,8 +317,8 @@ namespace panaderia_neko_pan
         {
             TextBox[] componentesTxt = new TextBox[]
             {
-                txtNumeropedido,txtNombrecliente, 
-                txtRun,txtCantidad, 
+                txtNumeropedido,txtNombrecliente,
+                txtRun,txtCantidad,
                 txtPreciounitario, txtCostodespacho,
                 txtObservaciones
             };
@@ -343,6 +343,11 @@ namespace panaderia_neko_pan
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
             dateTimePicker1.MinDate = DateTime.Today;
+        }
+
+        private void txtNumeropedido_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

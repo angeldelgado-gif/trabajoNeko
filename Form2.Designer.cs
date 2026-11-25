@@ -72,6 +72,7 @@
             txtNumeropedido.Name = "txtNumeropedido";
             txtNumeropedido.Size = new Size(182, 23);
             txtNumeropedido.TabIndex = 2;
+            txtNumeropedido.TextChanged += txtNumeropedido_TextChanged;
             // 
             // lblFecha
             // 
@@ -130,7 +131,7 @@
             lblTipoproducto.AutoSize = true;
             lblTipoproducto.Location = new Point(51, 180);
             lblTipoproducto.Name = "lblTipoproducto";
-            lblTipoproducto.Size = new Size(98, 15);
+            lblTipoproducto.Size = new Size(99, 15);
             lblTipoproducto.TabIndex = 13;
             lblTipoproducto.Text = "Tipo de producto";
             // 
@@ -171,7 +172,7 @@
             lblTipoentrega.AutoSize = true;
             lblTipoentrega.Location = new Point(51, 317);
             lblTipoentrega.Name = "lblTipoentrega";
-            lblTipoentrega.Size = new Size(89, 15);
+            lblTipoentrega.Size = new Size(90, 15);
             lblTipoentrega.TabIndex = 19;
             lblTipoentrega.Text = "Tipo de entrega";
             // 

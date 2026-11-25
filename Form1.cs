@@ -15,7 +15,8 @@ namespace panaderia_neko_pan
 
         private void btnConsulta_Click(object sender, EventArgs e)
         {
-
+            Form3 consulta = new Form3();
+            consulta.ShowDialog();
         }
 
         private void Form1_Load(object sender, EventArgs e)
