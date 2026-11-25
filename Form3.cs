@@ -25,6 +25,8 @@ namespace panaderia_neko_pan
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+            bool encontrado = false;
+
             if (!int.TryParse(txtNumeropedido.Text, out int inputNumPedido))
             {
                 MessageBox.Show("Error: Ingrese un codigo Numerico Valido!");
@@ -32,8 +34,6 @@ namespace panaderia_neko_pan
                 txtNumeropedido.Clear();
                 return;
             }
-
-            bool encontrado = false;
 
             string ruta = Application.StartupPath;
             string archivo = Path.Combine(ruta, "RegistroPedidos.csv");
@@ -101,6 +101,8 @@ namespace panaderia_neko_pan
         // Busca el pedido 
         private void MostrarPedidos()
         {
+            int totalPedidos = 0;
+
             string ruta = Application.StartupPath;
             string archivo = Path.Combine(ruta, "RegistroPedidos.csv");
 
@@ -142,14 +144,17 @@ namespace panaderia_neko_pan
 
                     // Se agrega el objeto pedido a la lista dinamica
                     pedidos.Add(consultaPedido);
+
+                    totalPedidos += consultaPedido.CostoTotal;
                 }
             }
 
             // Se pasa la lista con todos los Pedidos, al dataGridView para mostrarlo como tabla
             dataGridView1.DataSource = pedidos;
 
+            // actualizar labels
             lblResumen.Text = $"Pedidos encontrados: {pedidos.Count}";
-
+            lblResumen2.Text = $"Total Ventas Pedidos: {totalPedidos:C2}";
         }
 
         private void lblResumen_Click(object sender, EventArgs e)

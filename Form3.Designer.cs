@@ -36,7 +36,7 @@
             btnVertodo = new Button();
             dataGridView1 = new DataGridView();
             lblResumen = new Label();
-            label1 = new Label();
+            lblResumen2 = new Label();
             btnAtras = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -115,14 +115,14 @@
             lblResumen.Text = "Pedidos encontrados: 0";
             lblResumen.Click += lblResumen_Click;
             // 
-            // label1
+            // lblResumen2
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(236, 309);
-            label1.Name = "label1";
-            label1.Size = new Size(114, 15);
-            label1.TabIndex = 38;
-            label1.Text = "Total encontrado: $0";
+            lblResumen2.AutoSize = true;
+            lblResumen2.Location = new Point(236, 309);
+            lblResumen2.Name = "lblResumen2";
+            lblResumen2.Size = new Size(132, 15);
+            lblResumen2.TabIndex = 38;
+            lblResumen2.Text = "Total Ventas Pedidos: $0";
             // 
             // btnAtras
             // 
@@ -140,7 +140,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(841, 450);
             Controls.Add(btnAtras);
-            Controls.Add(label1);
+            Controls.Add(lblResumen2);
             Controls.Add(lblResumen);
             Controls.Add(dataGridView1);
             Controls.Add(btnVertodo);
@@ -150,6 +150,7 @@
             Controls.Add(cbxBuscarcliente);
             Controls.Add(lblBuscarcliente);
             Name = "Form3";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Consulta de informacion";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
@@ -165,7 +166,7 @@
         private Button btnVertodo;
         private DataGridView dataGridView1;
         private Label lblResumen;
-        private Label label1;
+        private Label lblResumen2;
         private Button btnAtras;
     }
 }
