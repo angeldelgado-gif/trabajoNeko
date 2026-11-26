@@ -60,152 +60,163 @@
             // lblNumeropedido
             // 
             lblNumeropedido.AutoSize = true;
-            lblNumeropedido.Location = new Point(51, 33);
+            lblNumeropedido.Font = new Font("Trebuchet MS", 8.25F);
+            lblNumeropedido.Location = new Point(44, 35);
             lblNumeropedido.Name = "lblNumeropedido";
-            lblNumeropedido.Size = new Size(107, 15);
+            lblNumeropedido.Size = new Size(96, 16);
             lblNumeropedido.TabIndex = 1;
             lblNumeropedido.Text = "Numero de pedido";
             // 
             // txtNumeropedido
             // 
-            txtNumeropedido.Location = new Point(51, 60);
+            txtNumeropedido.Location = new Point(44, 64);
             txtNumeropedido.Name = "txtNumeropedido";
-            txtNumeropedido.Size = new Size(182, 23);
+            txtNumeropedido.Size = new Size(157, 20);
             txtNumeropedido.TabIndex = 2;
             txtNumeropedido.TextChanged += txtNumeropedido_TextChanged;
             // 
             // lblFecha
             // 
             lblFecha.AutoSize = true;
-            lblFecha.Location = new Point(250, 33);
+            lblFecha.Font = new Font("Trebuchet MS", 8.25F);
+            lblFecha.Location = new Point(214, 35);
             lblFecha.Name = "lblFecha";
-            lblFecha.Size = new Size(38, 15);
+            lblFecha.Size = new Size(37, 16);
             lblFecha.TabIndex = 3;
             lblFecha.Text = "Fecha";
             // 
             // lblEstado
             // 
             lblEstado.AutoSize = true;
-            lblEstado.Location = new Point(489, 33);
+            lblEstado.Font = new Font("Trebuchet MS", 8.25F);
+            lblEstado.Location = new Point(419, 35);
             lblEstado.Name = "lblEstado";
-            lblEstado.Size = new Size(42, 15);
+            lblEstado.Size = new Size(41, 16);
             lblEstado.TabIndex = 5;
             lblEstado.Text = "Estado";
             // 
             // txtNombrecliente
             // 
-            txtNombrecliente.Location = new Point(51, 137);
+            txtNombrecliente.Location = new Point(44, 146);
             txtNombrecliente.Name = "txtNombrecliente";
-            txtNombrecliente.Size = new Size(255, 23);
+            txtNombrecliente.Size = new Size(219, 20);
             txtNombrecliente.TabIndex = 8;
             txtNombrecliente.TextChanged += txtNombrecliente_TextChanged;
             // 
             // lblNombrecliente
             // 
             lblNombrecliente.AutoSize = true;
-            lblNombrecliente.Location = new Point(51, 110);
+            lblNombrecliente.Font = new Font("Trebuchet MS", 8.25F);
+            lblNombrecliente.Location = new Point(44, 117);
             lblNombrecliente.Name = "lblNombrecliente";
-            lblNombrecliente.Size = new Size(108, 15);
+            lblNombrecliente.Size = new Size(99, 16);
             lblNombrecliente.TabIndex = 7;
             lblNombrecliente.Text = "Nombre del cliente";
             // 
             // txtRun
             // 
-            txtRun.Location = new Point(335, 138);
+            txtRun.Location = new Point(287, 147);
             txtRun.Name = "txtRun";
-            txtRun.Size = new Size(216, 23);
+            txtRun.Size = new Size(186, 20);
             txtRun.TabIndex = 10;
             txtRun.TextChanged += txtRun_TextChanged;
             // 
             // lblRun
             // 
             lblRun.AutoSize = true;
-            lblRun.Location = new Point(335, 111);
+            lblRun.Font = new Font("Trebuchet MS", 8.25F);
+            lblRun.Location = new Point(287, 118);
             lblRun.Name = "lblRun";
-            lblRun.Size = new Size(28, 15);
+            lblRun.Size = new Size(25, 16);
             lblRun.TabIndex = 9;
             lblRun.Text = "Run";
             // 
             // lblTipoproducto
             // 
             lblTipoproducto.AutoSize = true;
-            lblTipoproducto.Location = new Point(51, 180);
+            lblTipoproducto.Font = new Font("Trebuchet MS", 8.25F);
+            lblTipoproducto.Location = new Point(44, 192);
             lblTipoproducto.Name = "lblTipoproducto";
-            lblTipoproducto.Size = new Size(99, 15);
+            lblTipoproducto.Size = new Size(92, 16);
             lblTipoproducto.TabIndex = 13;
             lblTipoproducto.Text = "Tipo de producto";
             // 
             // txtCantidad
             // 
-            txtCantidad.Location = new Point(51, 274);
+            txtCantidad.Location = new Point(44, 292);
             txtCantidad.Name = "txtCantidad";
-            txtCantidad.Size = new Size(255, 23);
+            txtCantidad.Size = new Size(219, 20);
             txtCantidad.TabIndex = 16;
             // 
             // lblCantidad
             // 
             lblCantidad.AutoSize = true;
-            lblCantidad.Location = new Point(51, 247);
+            lblCantidad.Font = new Font("Trebuchet MS", 8.25F);
+            lblCantidad.Location = new Point(44, 263);
             lblCantidad.Name = "lblCantidad";
-            lblCantidad.Size = new Size(55, 15);
+            lblCantidad.Size = new Size(52, 16);
             lblCantidad.TabIndex = 15;
             lblCantidad.Text = "Cantidad";
             // 
             // txtPreciounitario
             // 
-            txtPreciounitario.Location = new Point(335, 274);
+            txtPreciounitario.Location = new Point(287, 292);
             txtPreciounitario.Name = "txtPreciounitario";
-            txtPreciounitario.Size = new Size(216, 23);
+            txtPreciounitario.Size = new Size(186, 20);
             txtPreciounitario.TabIndex = 18;
             // 
             // lblPreciounitario
             // 
             lblPreciounitario.AutoSize = true;
-            lblPreciounitario.Location = new Point(335, 247);
+            lblPreciounitario.Font = new Font("Trebuchet MS", 8.25F);
+            lblPreciounitario.Location = new Point(287, 263);
             lblPreciounitario.Name = "lblPreciounitario";
-            lblPreciounitario.Size = new Size(85, 15);
+            lblPreciounitario.Size = new Size(82, 16);
             lblPreciounitario.TabIndex = 17;
             lblPreciounitario.Text = "Precio Unitario";
             // 
             // lblTipoentrega
             // 
             lblTipoentrega.AutoSize = true;
-            lblTipoentrega.Location = new Point(51, 317);
+            lblTipoentrega.Font = new Font("Trebuchet MS", 8.25F);
+            lblTipoentrega.Location = new Point(44, 338);
             lblTipoentrega.Name = "lblTipoentrega";
-            lblTipoentrega.Size = new Size(90, 15);
+            lblTipoentrega.Size = new Size(86, 16);
             lblTipoentrega.TabIndex = 19;
             lblTipoentrega.Text = "Tipo de entrega";
             // 
             // txtCostodespacho
             // 
-            txtCostodespacho.Location = new Point(335, 344);
+            txtCostodespacho.Location = new Point(287, 367);
             txtCostodespacho.Name = "txtCostodespacho";
-            txtCostodespacho.Size = new Size(216, 23);
+            txtCostodespacho.Size = new Size(186, 20);
             txtCostodespacho.TabIndex = 22;
             // 
             // lblCostodespacho
             // 
             lblCostodespacho.AutoSize = true;
-            lblCostodespacho.Location = new Point(335, 317);
+            lblCostodespacho.Font = new Font("Trebuchet MS", 8.25F);
+            lblCostodespacho.Location = new Point(287, 338);
             lblCostodespacho.Name = "lblCostodespacho";
-            lblCostodespacho.Size = new Size(108, 15);
+            lblCostodespacho.Size = new Size(101, 16);
             lblCostodespacho.TabIndex = 21;
             lblCostodespacho.Text = "Costo de despacho";
             // 
             // txtObservaciones
             // 
-            txtObservaciones.Location = new Point(51, 418);
+            txtObservaciones.Location = new Point(44, 446);
             txtObservaciones.Multiline = true;
             txtObservaciones.Name = "txtObservaciones";
-            txtObservaciones.Size = new Size(500, 49);
+            txtObservaciones.Size = new Size(429, 52);
             txtObservaciones.TabIndex = 24;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(51, 391);
+            label1.Font = new Font("Trebuchet MS", 8.25F);
+            label1.Location = new Point(44, 417);
             label1.Name = "label1";
-            label1.Size = new Size(84, 15);
+            label1.Size = new Size(81, 16);
             label1.TabIndex = 23;
             label1.Text = "Observaciones";
             // 
@@ -213,9 +224,9 @@
             // 
             pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(589, 122);
+            pictureBox1.Location = new Point(505, 130);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(151, 262);
+            pictureBox1.Size = new Size(130, 279);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 25;
             pictureBox1.TabStop = false;
@@ -224,32 +235,36 @@
             // 
             dateTimePicker1.Format = DateTimePickerFormat.Short;
             dateTimePicker1.ImeMode = ImeMode.Off;
-            dateTimePicker1.Location = new Point(250, 60);
+            dateTimePicker1.Location = new Point(214, 64);
             dateTimePicker1.MaxDate = new DateTime(2026, 12, 31, 0, 0, 0, 0);
             dateTimePicker1.MinDate = new DateTime(2026, 11, 17, 0, 0, 0, 0);
             dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(216, 23);
+            dateTimePicker1.Size = new Size(186, 20);
             dateTimePicker1.TabIndex = 26;
             dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // btnGuardar
             // 
-            btnGuardar.Location = new Point(603, 503);
+            btnGuardar.BackColor = Color.FromArgb(255, 211, 182);
+            btnGuardar.Font = new Font("Trebuchet MS", 8.25F);
+            btnGuardar.Location = new Point(517, 537);
             btnGuardar.Name = "btnGuardar";
-            btnGuardar.Size = new Size(107, 33);
+            btnGuardar.Size = new Size(92, 35);
             btnGuardar.TabIndex = 27;
             btnGuardar.Text = "Guardar";
-            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.UseVisualStyleBackColor = false;
             btnGuardar.Click += btnGuardar_Click;
             // 
             // btnAtras
             // 
-            btnAtras.Location = new Point(52, 503);
+            btnAtras.BackColor = Color.FromArgb(255, 182, 200);
+            btnAtras.Font = new Font("Trebuchet MS", 8.25F);
+            btnAtras.Location = new Point(45, 537);
             btnAtras.Name = "btnAtras";
-            btnAtras.Size = new Size(107, 33);
+            btnAtras.Size = new Size(92, 35);
             btnAtras.TabIndex = 28;
             btnAtras.Text = "Atras";
-            btnAtras.UseVisualStyleBackColor = true;
+            btnAtras.UseVisualStyleBackColor = false;
             btnAtras.Click += btnAtras_Click;
             // 
             // cbxTipoproducto
@@ -257,9 +272,9 @@
             cbxTipoproducto.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxTipoproducto.FormattingEnabled = true;
             cbxTipoproducto.Items.AddRange(new object[] { "Pan hallulla", "Pan marraqueta", "Pan dobladitas", "Pan Molde", "Berlin", "Pastel de hoja", "Torta amor", "Torta kawai" });
-            cbxTipoproducto.Location = new Point(51, 207);
+            cbxTipoproducto.Location = new Point(44, 221);
             cbxTipoproducto.Name = "cbxTipoproducto";
-            cbxTipoproducto.Size = new Size(255, 23);
+            cbxTipoproducto.Size = new Size(219, 24);
             cbxTipoproducto.TabIndex = 29;
             // 
             // cbxEstado
@@ -267,9 +282,9 @@
             cbxEstado.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxEstado.FormattingEnabled = true;
             cbxEstado.Items.AddRange(new object[] { "Ingresado", "En proceso", "Terminado" });
-            cbxEstado.Location = new Point(489, 60);
+            cbxEstado.Location = new Point(419, 64);
             cbxEstado.Name = "cbxEstado";
-            cbxEstado.Size = new Size(216, 23);
+            cbxEstado.Size = new Size(186, 24);
             cbxEstado.TabIndex = 30;
             // 
             // cbxTipoEntrega
@@ -277,16 +292,17 @@
             cbxTipoEntrega.DropDownStyle = ComboBoxStyle.DropDownList;
             cbxTipoEntrega.FormattingEnabled = true;
             cbxTipoEntrega.Items.AddRange(new object[] { "Retiro en Tienda", "Despacho a Domicilio" });
-            cbxTipoEntrega.Location = new Point(52, 344);
+            cbxTipoEntrega.Location = new Point(45, 367);
             cbxTipoEntrega.Name = "cbxTipoEntrega";
-            cbxTipoEntrega.Size = new Size(254, 23);
+            cbxTipoEntrega.Size = new Size(218, 24);
             cbxTipoEntrega.TabIndex = 31;
             // 
             // Registropedidos
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(6F, 16F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(764, 561);
+            BackColor = Color.FromArgb(255, 201, 214);
+            ClientSize = new Size(705, 598);
             Controls.Add(cbxTipoEntrega);
             Controls.Add(cbxEstado);
             Controls.Add(cbxTipoproducto);
@@ -312,6 +328,7 @@
             Controls.Add(lblFecha);
             Controls.Add(txtNumeropedido);
             Controls.Add(lblNumeropedido);
+            Font = new Font("Trebuchet MS", 8.25F);
             Name = "Registropedidos";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Registro de pedidos";

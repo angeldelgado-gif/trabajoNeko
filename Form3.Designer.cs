@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             lblBuscarcliente = new Label();
             cbxBuscarcliente = new ComboBox();
             lblTextobuscar = new Label();
@@ -38,15 +39,18 @@
             lblResumen = new Label();
             lblResumen2 = new Label();
             btnAtras = new Button();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // lblBuscarcliente
             // 
             lblBuscarcliente.AutoSize = true;
+            lblBuscarcliente.Font = new Font("Trebuchet MS", 8.25F);
             lblBuscarcliente.Location = new Point(49, 29);
             lblBuscarcliente.Name = "lblBuscarcliente";
-            lblBuscarcliente.Size = new Size(82, 15);
+            lblBuscarcliente.Size = new Size(79, 16);
             lblBuscarcliente.TabIndex = 3;
             lblBuscarcliente.Text = "Buscar Cliente";
             // 
@@ -63,9 +67,10 @@
             // lblTextobuscar
             // 
             lblTextobuscar.AutoSize = true;
+            lblTextobuscar.Font = new Font("Trebuchet MS", 8.25F);
             lblTextobuscar.Location = new Point(223, 29);
             lblTextobuscar.Name = "lblTextobuscar";
-            lblTextobuscar.Size = new Size(124, 15);
+            lblTextobuscar.Size = new Size(116, 16);
             lblTextobuscar.TabIndex = 32;
             lblTextobuscar.Text = "Buscar Codigo Cliente";
             // 
@@ -78,22 +83,26 @@
             // 
             // btnBuscar
             // 
+            btnBuscar.BackColor = Color.FromArgb(255, 211, 182);
+            btnBuscar.Font = new Font("Trebuchet MS", 8.25F);
             btnBuscar.Location = new Point(440, 52);
             btnBuscar.Name = "btnBuscar";
             btnBuscar.Size = new Size(107, 33);
             btnBuscar.TabIndex = 34;
             btnBuscar.Text = "Buscar";
-            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.UseVisualStyleBackColor = false;
             btnBuscar.Click += btnBuscar_Click;
             // 
             // btnVertodo
             // 
+            btnVertodo.BackColor = Color.FromArgb(255, 211, 182);
+            btnVertodo.Font = new Font("Trebuchet MS", 8.25F);
             btnVertodo.Location = new Point(570, 52);
             btnVertodo.Name = "btnVertodo";
             btnVertodo.Size = new Size(107, 33);
             btnVertodo.TabIndex = 35;
             btnVertodo.Text = "Ver todo";
-            btnVertodo.UseVisualStyleBackColor = true;
+            btnVertodo.UseVisualStyleBackColor = false;
             btnVertodo.Click += btnVertodo_Click;
             // 
             // dataGridView1
@@ -102,15 +111,16 @@
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(49, 123);
             dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(628, 150);
+            dataGridView1.Size = new Size(933, 249);
             dataGridView1.TabIndex = 36;
             // 
             // lblResumen
             // 
             lblResumen.AutoSize = true;
-            lblResumen.Location = new Point(49, 309);
+            lblResumen.Font = new Font("Trebuchet MS", 8.25F);
+            lblResumen.Location = new Point(48, 409);
             lblResumen.Name = "lblResumen";
-            lblResumen.Size = new Size(130, 15);
+            lblResumen.Size = new Size(123, 16);
             lblResumen.TabIndex = 37;
             lblResumen.Text = "Pedidos encontrados: 0";
             lblResumen.Click += lblResumen_Click;
@@ -118,27 +128,44 @@
             // lblResumen2
             // 
             lblResumen2.AutoSize = true;
-            lblResumen2.Location = new Point(236, 309);
+            lblResumen2.Font = new Font("Trebuchet MS", 8.25F);
+            lblResumen2.Location = new Point(235, 409);
             lblResumen2.Name = "lblResumen2";
-            lblResumen2.Size = new Size(132, 15);
+            lblResumen2.Size = new Size(127, 16);
             lblResumen2.TabIndex = 38;
             lblResumen2.Text = "Total Ventas Pedidos: $0";
             // 
             // btnAtras
             // 
-            btnAtras.Location = new Point(49, 379);
+            btnAtras.BackColor = Color.FromArgb(255, 182, 200);
+            btnAtras.Font = new Font("Trebuchet MS", 8.25F);
+            btnAtras.Location = new Point(49, 439);
             btnAtras.Name = "btnAtras";
             btnAtras.Size = new Size(107, 33);
             btnAtras.TabIndex = 39;
             btnAtras.Text = "Atras";
-            btnAtras.UseVisualStyleBackColor = true;
+            btnAtras.UseVisualStyleBackColor = false;
             btnAtras.Click += btnAtras_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.ImageLocation = "";
+            pictureBox1.Location = new Point(1005, 71);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(243, 354);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 40;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(841, 450);
+            BackColor = Color.FromArgb(255, 245, 233);
+            ClientSize = new Size(1293, 534);
+            Controls.Add(pictureBox1);
             Controls.Add(btnAtras);
             Controls.Add(lblResumen2);
             Controls.Add(lblResumen);
@@ -153,6 +180,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Consulta de informacion";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -168,5 +196,6 @@
         private Label lblResumen;
         private Label lblResumen2;
         private Button btnAtras;
+        private PictureBox pictureBox1;
     }
 }

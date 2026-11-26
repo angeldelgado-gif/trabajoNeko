@@ -40,41 +40,47 @@
             // lblnombre
             // 
             lblnombre.AutoSize = true;
-            lblnombre.Font = new Font("Comic Sans MS", 30F);
-            lblnombre.Location = new Point(216, 18);
+            lblnombre.Font = new Font("Segoe Print", 30F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblnombre.Location = new Point(185, 11);
             lblnombre.Name = "lblnombre";
-            lblnombre.Size = new Size(390, 56);
+            lblnombre.Size = new Size(453, 70);
             lblnombre.TabIndex = 0;
             lblnombre.Text = "Panaderia Neko-Pan";
             // 
             // btnRegistro
             // 
+            btnRegistro.BackColor = Color.FromArgb(255, 211, 182);
+            btnRegistro.Font = new Font("Trebuchet MS", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnRegistro.Location = new Point(211, 283);
             btnRegistro.Name = "btnRegistro";
             btnRegistro.Size = new Size(159, 55);
             btnRegistro.TabIndex = 2;
             btnRegistro.Text = "Registro de informacion";
-            btnRegistro.UseVisualStyleBackColor = true;
+            btnRegistro.UseVisualStyleBackColor = false;
             btnRegistro.Click += btnRegistro_Click;
             // 
             // btnConsulta
             // 
+            btnConsulta.BackColor = Color.FromArgb(255, 211, 182);
+            btnConsulta.Font = new Font("Trebuchet MS", 8.25F);
             btnConsulta.Location = new Point(442, 283);
             btnConsulta.Name = "btnConsulta";
             btnConsulta.Size = new Size(159, 55);
             btnConsulta.TabIndex = 3;
             btnConsulta.Text = "Consulta de informacion";
-            btnConsulta.UseVisualStyleBackColor = true;
+            btnConsulta.UseVisualStyleBackColor = false;
             btnConsulta.Click += btnConsulta_Click;
             // 
             // btnCerrar
             // 
+            btnCerrar.BackColor = Color.FromArgb(255, 182, 200);
+            btnCerrar.Font = new Font("Trebuchet MS", 8.25F);
             btnCerrar.Location = new Point(325, 360);
             btnCerrar.Name = "btnCerrar";
             btnCerrar.Size = new Size(159, 55);
             btnCerrar.TabIndex = 4;
             btnCerrar.Text = "Salir";
-            btnCerrar.UseVisualStyleBackColor = true;
+            btnCerrar.UseVisualStyleBackColor = false;
             btnCerrar.Click += btnCerrar_Click;
             // 
             // pictureBox1
@@ -96,7 +102,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.WhiteSmoke;
+            BackColor = Color.FromArgb(255, 245, 233);
             ClientSize = new Size(800, 450);
             Controls.Add(pictureBox1);
             Controls.Add(btnCerrar);
